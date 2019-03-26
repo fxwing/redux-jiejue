@@ -4,14 +4,12 @@ import { addComment } from '../store/actions/comment'
 
 @connect(
     state => ({comment:state.comments.comment}),
-    { addComment } 
-  )
- class TestCom extends React.Component {
+    {addComment}
+  )class TestCom extends React.Component {
 
     componentDidMount() {
-      this.props.addComment({
-          comment: 100
-      })  
+        console.log(this.props)
+        this.props.addComment({comment:'zz'})
     }
 
 

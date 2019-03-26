@@ -16,10 +16,10 @@ class Index extends React.Component {
   render() {
 
     return (
-      <div>
+      <div >
         <ComponentHeader />
-        <BodyIndex />
-        <TestCom />
+        <BodyIndex {...this.props} />
+        <TestCom {...this.props}/>
         <ComponentFooter />
       </div>
     );
@@ -29,6 +29,6 @@ class Index extends React.Component {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Index />
+    <Index  dispatch={store.dispatch}/>
   </Provider>,
   document.getElementById('app'));

@@ -12,10 +12,8 @@ export function loginSuccess(data) {
 
 
 export function logOut() {
-
     return {
         type: types.LOGOUT
     }
 }
-
 

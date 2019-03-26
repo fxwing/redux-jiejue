@@ -13,15 +13,20 @@ const initUserState = {
 
 }
 
-export function user(state = 0,action){
+export function user(state = initUserState.userInfo,action){
 
     switch(action.type) {
         case types.LOGOIN_SUCCESS:
             console.log("user......"+ action.payload);
-            return state+10;
+            return {
+                ...state,
+                ...action.payload
+            }
         case types.LOGOUT:
-            return state - 10;
-        
+            return {
+                userInfo:'一经推出'
+            };
+
         default:
             return state;
     }

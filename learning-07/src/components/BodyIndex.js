@@ -11,6 +11,7 @@ import * as userInfoActions from '../store/actions/user'
             id:'呵呵呵呵',
             username: 'bibibiibibi'
         })
+        console.log('uesr', this.props)
     }
 
 
@@ -26,9 +27,8 @@ import * as userInfoActions from '../store/actions/user'
     }
 }
 function  mapStateToProps(state) {
-    console.log("mapStateToProps...."+state);
     return {
-        user: state.user.userInfo
+        user: state.userInfo
     }
 }
 
